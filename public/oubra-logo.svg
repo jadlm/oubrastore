@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 360 72" role="img" aria-label="OUBRA STORE">
+  <rect width="360" height="72" fill="#ffffff"/>
+  <text x="8" y="46" font-family="system-ui,Segoe UI,sans-serif" font-size="28" font-weight="800" font-style="italic" fill="#D4A017">OUBRA</text>
+  <circle cx="168" cy="36" r="18" fill="none" stroke="#111" stroke-width="2.5"/>
+  <text x="154" y="48" font-family="Georgia,serif" font-size="36" font-weight="700" fill="#D4A017">S</text>
+  <text x="188" y="46" font-family="system-ui,Segoe UI,sans-serif" font-size="28" font-weight="800" font-style="italic" fill="#111111">TORE</text>
+  <rect x="8" y="54" width="344" height="14" rx="2" fill="#D4A017"/>
+  <text x="180" y="65" text-anchor="middle" font-family="system-ui,Segoe UI,sans-serif" font-size="8" font-weight="700" fill="#111111">Librairie | Papeterie | Imprimerie</text>
+</svg>

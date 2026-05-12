@@ -1,27 +1,68 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Outfit:wght@400;500;600;700;800&display=swap');
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
-:root {
-  --background: #ffffff;
-  --foreground: #171717;
+@layer base {
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  html { scroll-behavior: smooth; }
+  body { font-family: 'Inter', system-ui, sans-serif; color: #1a1a1a; background: #fff; -webkit-font-smoothing: antialiased; }
+  ::selection { background: #D4A017; color: #fff; }
+  ::-webkit-scrollbar { width: 8px; }
+  ::-webkit-scrollbar-track { background: #f1f1f1; }
+  ::-webkit-scrollbar-thumb { background: #D4A017; border-radius: 4px; }
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
+@layer components {
+  .btn-primary {
+    @apply bg-primary text-dark-DEFAULT font-semibold px-6 py-3 rounded-lg transition-all duration-300 hover:bg-primary-dark hover:shadow-glow active:scale-95;
+  }
+  .btn-dark {
+    @apply bg-dark-DEFAULT text-white font-semibold px-6 py-3 rounded-lg transition-all duration-300 hover:bg-dark-300 active:scale-95;
+  }
+  .btn-outline {
+    @apply border-2 border-primary text-primary font-semibold px-6 py-3 rounded-lg transition-all duration-300 hover:bg-primary hover:text-dark-DEFAULT active:scale-95;
+  }
+  .glass {
+    @apply bg-white/80 backdrop-blur-md border border-white/20;
+  }
+  .section-title {
+    @apply font-display text-3xl md:text-4xl font-bold text-dark-DEFAULT;
+  }
+  .section-subtitle {
+    @apply text-gray-500 text-lg mt-2 max-w-2xl;
+  }
+  .card {
+    @apply bg-white rounded-xl shadow-card border border-surface-border transition-all duration-300 hover:shadow-premium;
+  }
+  .skeleton {
+    @apply bg-gray-200 rounded animate-pulse;
+  }
+  .badge-promo {
+    @apply bg-red-500 text-white text-xs font-bold px-2 py-1 rounded-full;
+  }
+  .badge-new {
+    @apply bg-primary text-dark-DEFAULT text-xs font-bold px-2 py-1 rounded-full;
+  }
+  .input-field {
+    @apply w-full px-4 py-3 rounded-lg border border-surface-border bg-white focus:border-primary focus:ring-2 focus:ring-primary/20 outline-none transition-all duration-200;
+  }
+  .page-enter {
+    animation: pageEnter 350ms ease-out;
   }
 }
 
-body {
-  color: var(--foreground);
-  background: var(--background);
-  font-family: Arial, Helvetica, sans-serif;
+@keyframes pageEnter {
+  from { opacity: 0; transform: translateY(6px); }
+  to { opacity: 1; transform: translateY(0); }
 }
 
-@layer utilities {
-  .text-balance {
-    text-wrap: balance;
-  }
+.animate-fade-in {
+  animation: fadeIn 220ms ease-out;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(8px); }
+  to { opacity: 1; transform: translateY(0); }
 }
